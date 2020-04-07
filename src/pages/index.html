@@ -1,22 +1,36 @@
-    <div data-sticky-container>
-        <div class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-            <div class="top-bar-title">
-                <span data-responsive-toggle="responsive-menu">
-                    <span class="menu-icon dark" data-toggle></span>
-                </span>
-                <!--<span class="hide-for-large">F</span>-->
-                <h1>Francis Fournier</h1>
-            </div>
-            <div class="top-bar-right">
-                <ul class="vertical medium-horizontal menu" id="responsive-menu" data-magellan data-options="barOffset:0;threshold:80;">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#interets">Centres d’intérêt</a></li>
-                    <li><a href="#telechargement">Téléchargement</a></li>
-                    <li><a href="#contact">Contact</a></li>
+    <div id="pagetop"></div>
 
-                </ul>
+    <div data-sticky-container>
+        <div data-sticky data-margin-top='0' data-sticky-on="small" data-top-anchor="pagetop:bottom" data-btm-anchor="telechargement:bottom">
+            <div class="title-bar topbar-center-logo-mobile" data-responsive-toggle="responsive-menu" data-hide-for="xlarge">
+                <div class="title-bar-left">
+                    <div class="title-bar-title">
+                        <h1>Francis Fournier</h1>
+                    </div>
+                </div>
+                <div class="title-bar-right">
+                    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+                </div>
+            </div>
+
+            <div class="top-bar stacked-for-large topbar-center-logo topbar-sticky-shrink" id="responsive-menu">
+                <div class="top-bar-left">
+                    <ul class="menu vertical xlarge-horizontal">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#projets">Projets</a></li>
+                        <li><a href="#competences">Compétences</a></li>
+                    </ul>
+                </div>
+                <div class="top-bar-center">
+                    <h1>Francis Fournier</h1>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu vertical xlarge-horizontal">
+                        <li><a href="#interets">Centres d’intérêt</a></li>
+                        <li><a href="#telechargement">Téléchargement</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -277,5 +291,21 @@
         </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{{root}}assets/js/app.js"></script>
+    <script type="text/javascript">
+        $(function() {
+			$('a[href*=\\#]:not([href=\\#])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top - 75
+						}, 800);
+						return false;
+					}
+				}
+			});
+		});
+    </script>
