@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="top-bar stacked-for-large topbar-center-logo topbar-sticky-shrink" id="responsive-menu">
+            <div class="top-bar stacked-for-large topbar-center-logo topbar-sticky-shrink" id="responsive-menu" data-smooth-scroll data-options data-animation-duration=700 data-animation-easing='swing' data-offset=60 >
                 <div class="top-bar-left">
                     <ul class="menu vertical xlarge-horizontal">
                         <li><a href="#accueil">Accueil</a></li>
@@ -62,108 +62,177 @@
         </div>
     </div>
 
-    <div class="headerbg">
-        <div class="grid-container">
-            <div class="grid-x">
-                <div class="cell large-12 header" id="accueil" data-magellan-target="accueil">
-                    <p>Développeur Informatique</p>
-                    <p class="small">Bienvenue sur mon portfolio</p>
-                    <p class="social"><a href="https://fr.linkedin.com/in/fournierfrancis" target="_blank"><i class="icon-linkedin"></i></a><a href="https://github.com/Le6barbare" target="_blank"><i class="icon-github"></i></a><a href="https://le6barbare.itch.io/" target="_blank"><i class="icon-globe"></i></a></p>
-                </div>
-            </div>
-            <hr>
+    <div class="headerbg" id="accueil" data-magellan-target="accueil">
+        <div class="top-content-section"></div>
+        <div class="header-content">
+            <p>Développeur Informatique</p>
+            <p class="small">Bienvenue sur mon portfolio</p>
+            <p class="social"><a href="https://fr.linkedin.com/in/fournierfrancis" target="_blank"><i class="icon-linkedin"></i></a><a href="https://github.com/Le6barbare" target="_blank"><i class="icon-github"></i></a><a href="https://le6barbare.itch.io/" target="_blank"><i class="icon-globe"></i></a></p>
         </div>
+        <div class="bottom-content-section">
+            <a href="#projets" data-smooth-scroll data-options data-animation-easing='swing' data-offset=75><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
+            <!-- <hr> -->
+        </div>
+        
     </div>
 
     <div class="grid-container">
         <div id="projets" data-magellan-target="projets">
             <div class="grid-container large-12">
                 <h2><i class="icon-magic"></i> Projets</h2>
-                <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a grid-x of cards.</h4>
-                        <p>This grid-x of cards is embedded in an X-Y Block Grid.</p>
+                <ul class="tabs" data-tabs id="project-tabs">
+                    <li class="tabs-title is-active"><a href="#gamejams" aria-selected="true">Game Jams</a></li>
+                    <li class="tabs-title"><a data-tabs-target="globalgamejam" href="#globalgamejam">Global Game Jam</a></li>
+                    <!-- <li class="tabs-title"><a data-tabs-target="autres" href="#autres">Autres</a></li> -->
+                </ul>
+                <div class="tabs-content" data-tabs-content="project-tabs">
+                    <div class="tabs-panel is-active" id="gamejams">
+                        <div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4">
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/mini-golf-64">
+                                    <div class="card">
+                                        <img src="assets/img/covers/MiniGolf64.png">
+                                        <div class="card-section">
+                                            <h4>Mini Golf 64</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://asbelgrants.itch.io/rupture">
+                                    <div class="card">
+                                        <img src="assets/img/covers/Rupture.png">
+                                        <div class="card-section">
+                                            <h4>Rupture</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://simon-gigant.itch.io/krakenomicon">
+                                    <div class="card">
+                                        <img src="assets/img/covers/Krakenomicon.png">
+                                        <div class="card-section">
+                                            <h4>Krakenomicon</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/everyday-struggle">
+                                    <div class="card">
+                                        <img src="assets/img/covers/EverydayStruggle.png">
+                                        <div class="card-section">
+                                            <h4>Everyday Struggle</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/lovegarden">
+                                    <div class="card">
+                                        <img src="assets/img/covers/Lovegarden.png">
+                                        <div class="card-section">
+                                            <h4>Lovegarden</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/4-days">
+                                    <div class="card">
+                                        <img src="assets/img/covers/4Days.png">
+                                        <div class="card-section">
+                                            <h4>4 Days</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/udungeon">
+                                    <div class="card">
+                                        <img src="assets/img/covers/uDungeon.png">
+                                        <div class="card-section">
+                                            <h4>µDungeon</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/aestheticbonehunt">
+                                    <div class="card">
+                                        <img src="assets/img/covers/AestheticBoneHunt.png">
+                                        <div class="card-section">
+                                            <h4>A E S T H E T I C Bone Hunt</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/old-west-clicker">
+                                    <div class="card">
+                                        <img src="assets/img/covers/OldWestClicker.png">
+                                        <div class="card-section">
+                                            <h4>Old West Clicker</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://le6barbare.itch.io/dwarfs-mining-team-simulator">
+                                    <div class="card">
+                                        <img src="assets/img/covers/DwarfSim.png">
+                                        <div class="card-section">
+                                            <h4>Dwarf's Mining Team Simulator</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a card.</h4>
-                        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+                    <div class="tabs-panel" id="globalgamejam">
+                        <div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4">
+                            <div class="cell">
+                                <a href="https://globalgamejam.org/2020/games/bolt-beat-down-0">
+                                    <div class="card">
+                                        <img src="assets/img/covers/BoltUpBeatDown.png">
+                                        <div class="card-section">
+                                            <h4>Bolt up & Beat down</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://globalgamejam.org/2019/games/house-dead">
+                                    <div class="card">
+                                        <img src="assets/img/covers/HouseOfTheDead.png">
+                                        <div class="card-section">
+                                            <h4>House of the Dead</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://globalgamejam.org/2018/games/sattelion">
+                                    <div class="card">
+                                        <img src="assets/img/covers/Sattelion.png">
+                                        <div class="card-section">
+                                            <h4>SATTELION</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="cell">
+                                <a href="https://globalgamejam.org/2017/games/polaro-bear-vs-heat-wave">
+                                    <div class="card">
+                                        <img src="assets/img/covers/PolaroBear.png">
+                                        <div class="card-section">
+                                            <h4>POLAR'O BEAR vs HEAT-WAVE</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a card.</h4>
-                        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a grid-x of cards.</h4>
-                        <p>This grid-x of cards is embedded in an X-Y Block Grid.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a card.</h4>
-                        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a card.</h4>
-                        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a grid-x of cards.</h4>
-                        <p>This grid-x of cards is embedded in an X-Y Block Grid.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a card.</h4>
-                        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="cell">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/315x250">
-                        <div class="card-section">
-                        <h4>This is a card.</h4>
-                        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -178,90 +247,71 @@
                         <h3>Programmation Orientée Objet</h3>
                         <ul class="disc">
                             <li>C# .net
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>                            </li>
                             <li>Java
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
+                        </ul>
+                        <h3>Moteurs de jeu</h3>
+                        <ul class="disc">
+                            <li>Unity
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                         </ul>
                         <h3>Environnement</h3>
                         <ul class="disc">
                             <li>Windows
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>                            </li>
                             <li>Linux
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                         </ul>
                     </div>
                     <div class="cell large-4 medium-4">
                         <h3>Programmation Web</h3>
                         <ul>
                             <li>HTML 5
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>                            </li>
                             <li>CSS 3
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>                            </li>
                             <li>PHP
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>JavaScript
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>NodeJS
-                                <div class="skill-lvl" title="Débutant"><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Débutant"><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>Sass/LESS
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                         </ul>
                         <h3>Framework</h3>
                         <ul>
                             <li>Bootstrap
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>Foundation
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                         </ul>
                     </div>
                     <div class="cell large-4 medium-4">
                         <h3>Logiciels</h3>
                         <ul>
                             <li>Visual Studio
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>Eclipse
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>Sublime Text
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>Visual Studio Code
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>Github
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>GIMP
-                                <div class="skill-lvl" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Avancé"><i class="square blue"></i><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i></div>                            </li>
                             <li>Sony Vegas
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
-                            <li>Unity
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                         </ul>
                         <h3>Autres</h3>
                         <ul>
                             <li>Python
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
-                            <li>SQL/PLSQL
-                                <div class="skill-lvl" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>
-                            </li>
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
+                            <li>SQL
+                                <div class="skill-lvl" data-tooltip tabindex="1" data-position="right" title="Intermédiaire"><i class="square blue"></i><i class="square blue"></i><i class="square grey"></i><i class="square grey"></i></div>                            </li>
                             <li>Test et validation Logiciel</li>
                             <li>Connaissances en SEO</li>
                         </ul>
@@ -318,23 +368,7 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
     <script src="assets/js/app.js"></script>
-    <script type="text/javascript">
-        $(function() {
-			$('a[href*=\\#]:not([href=\\#])').click(function() {
-				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-					var target = $(this.hash);
-					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-					if (target.length) {
-						$('html,body').animate({
-							scrollTop: target.offset().top - 75
-						}, 800);
-						return false;
-					}
-				}
-			});
-		});
-    </script>
 </body>
 </html>
